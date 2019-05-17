@@ -1,0 +1,113 @@
+.booking{
+  background-image: linear-gradient(105deg,
+                    rgba($color-white,.9) 0%,
+                    rgba($color-white,.8) 50%,
+                    transparent, 50%,
+                    transparent),
+                    url("../img/nat-10.jpg");
+  height: 50rem;
+  background-size: cover;
+  @include componet-styles;
+
+  &__form{
+    width: 50%;
+    padding: 5rem 3rem;
+  }
+
+  &__form-group{
+    padding: 1rem;
+    padding-left: 0;
+  }
+
+  &__input{
+    font-family: inherit;
+    width: 80%;
+    padding: 1.5rem;
+    border: none;
+
+    border-bottom: 3px solid transparent;
+    transition: all .3s;
+
+    &:focus{
+      outline: none;
+
+
+      &:invalid{
+        border-bottom: 3px solid $color-secondary-dark;
+      }
+
+      &:valid{
+        border-bottom: 3px solid $color-primary-dark;
+      }
+    }
+
+    &::-webkit-input-placeholder{
+      font-family: inherit;
+      color: $color-gray-dark-1;
+    }
+
+  }
+
+  &__label{
+    display: block;
+    padding: 1rem 0 0 1.5rem;
+    //transform: translateY(0);
+    opacity: 1;
+    transition: all .3s;
+  }
+
+  &__input:placeholder-shown + &__label{
+    opacity: 0;
+    transform: translateY(-4.5rem);
+
+  }
+
+  &__radio-group{
+    display: inline-block;
+    width: 49%;
+    position: relative;
+  }
+
+  &__radio-input{
+    opacity: 0;
+    //visibility: hidden;
+
+  }
+
+  &__radio-label{
+    font-size: $font-size-default;
+    font-family: inherit;
+    color: $color-gray-dark-1;
+    padding-left: 4rem;
+  }
+
+  &__radio-button{
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    border: 3px solid $color-primary;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -.5rem;
+    left: 0;
+
+    &::after{
+      content: "";
+      @include center;
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      background-color: $color-primary;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all .3s;
+    }
+  }
+  &__radio-input:checked + &__radio-label &__radio-button::after{
+    opacity: 1;
+  }
+  &__radio-input:focus + &__radio-label &__radio-button{
+    transform: scale(1.05);
+  }
+}

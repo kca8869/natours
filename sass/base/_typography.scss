@@ -1,0 +1,33 @@
+body{
+  margin: 3rem;
+  font-family: "Lato", sans-serif;
+}
+.heading-seconday{
+  font-size: $font-size-large;
+  color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient($primary-gradient);
+  -webkit-background-clip:text;
+  background-clip: text;
+  transition: all .3s;
+  letter-spacing: .2rem;
+
+  &:hover{
+    transform: scale(1.1) skew(5deg,2deg);
+    text-shadow: $shadow-text;
+  }
+
+}
+
+.heading-tertiary{
+  text-transform: uppercase;
+  font-size: $font-size-default;
+  letter-spacing: 1.5;
+  color: $color-gray-dark-1;
+  font-weight: 700;
+}
+.paragraph{
+  font-size: $font-size-default;
+  color: $color-gray-dark-1;
+  line-height: 1.6;
+}

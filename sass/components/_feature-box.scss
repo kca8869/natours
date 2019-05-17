@@ -1,0 +1,32 @@
+.feature-box{
+  text-align: center;
+  background-color: rgba($color-white,.8);
+  padding: 2.5rem;
+  @include componet-styles;
+  transition: all .3s;
+  & > * {
+    margin-bottom: 2rem;
+  }
+
+  &__icon{
+    color: transparent;
+    background-image: linear-gradient($primary-gradient);
+    font-size: 6rem;
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  &__heading{
+  }
+
+  &__text{
+
+  }
+
+  &:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: $shadow-card-hover;
+
+  }
+}

@@ -1,0 +1,55 @@
+//COLORS
+$color-white:#FFF;
+$color-primary:#55c57a;
+$color-black:#000;
+$color-primary-light:#7ed56f;
+$color-primary-dark:#28b485;
+
+$color-secondary-light:#FFB900;
+$color-secondary-dark:#FF7730;
+
+$color-tertiary-light:#2998FF;
+$color-tertiary-dark:#5643FA;
+
+$color-gray-light-1:#f7f7f7;
+$color-gray-light-2:#eee;
+$color-gray-dark-1:#777;
+
+//GRADIENTS
+
+$primary-gradient:to right bottom, $color-primary-light,$color-primary-dark;
+$secondary-gradient:to right bottom, $color-secondary-light,$color-secondary-dark;
+$tertiary-gradient:to right bottom, $color-tertiary-light,$color-tertiary-dark;
+
+$primary-gradient-bgimg:to right bottom,
+                  rgba($color-primary-light,.8),
+                  rgba($color-primary-dark,.8);
+
+$secondary-gradient-bgimg:to right bottom,
+                  rgba($color-secondary-light,.8),
+                  rgba($color-secondary-dark,.8);
+
+$tertiary-gradient-bgimg:to right bottom,
+                  rgba($color-tertiary-light,.8),
+                  rgba($color-tertiary-dark,.8);
+
+
+//SHADOWS
+$shadow-button-hover:0 2rem 4rem rgba($color-black,.6);
+$shadow-button-active:0 1rem 2rem rgba($color-black,.4);
+$shadow-text:1rem 2rem 4rem rgba($color-black,.4);
+$shadow-card:0 2rem 4rem rgba($color-black,.4);
+$shadow-card-hover:0 2.5rem 4.5rem rgba($color-black,.6);
+
+//FONTS
+$font-size-default:1.6rem;
+$font-size-large:3rem;
+
+//GRID
+
+$grid-width:114rem;
+$vertical-gutter: 8rem;
+$horizontal-gutter:6rem;
+
+//ECT
+$border-radius-card:3px;

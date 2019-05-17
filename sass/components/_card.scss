@@ -1,0 +1,129 @@
+.card{
+  height: 50rem;
+  position: relative;
+  -moz-perspective: 150rem;
+  perspective: 150rem;
+
+  &:hover &__side--front{
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back{
+    transform: rotateY(0deg);
+  }
+
+  &__side{
+    @include componet-styles;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 1s;
+    height: 50rem;
+    &--front{
+      overflow: hidden;
+      background-color: $color-white;
+    }
+
+    &--back{
+      transform: rotateY(-180deg);
+
+      &--1{
+        background-image: linear-gradient($secondary-gradient);
+      }
+      &--2{
+        background-image: linear-gradient($primary-gradient);
+      }
+      &--3{
+        background-image: linear-gradient($tertiary-gradient);
+      }
+    }
+  }//End __side
+
+  &__img{
+    height: 23rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    clip-path:polygon(0 0, 100% 0, 100% 85%,0 100%);
+
+    &--1{
+      background-image: linear-gradient($secondary-gradient),
+                        url("../img/nat-5.jpg");
+    }
+    &--2{
+      background-image: linear-gradient($primary-gradient),
+                        url("../img/nat-6.jpg");
+    }
+    &--3{
+      background-image: linear-gradient($tertiary-gradient),
+                        url("../img/nat-7.jpg");
+    }
+  }//end of __img
+
+  &__heading{
+    color: $color-white;
+    font-size: 2.8rem;
+    position: absolute;
+    top: 15rem;
+    right: 2rem;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 300;
+    width: 75%;
+    &--span{
+      padding: .5rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      &--1{
+        background-image: linear-gradient($secondary-gradient-bgimg);
+      }
+      &--2{
+        background-image: linear-gradient($primary-gradient-bgimg);
+      }
+      &--3{
+        background-image: linear-gradient($tertiary-gradient-bgimg);
+      }
+    }//end of __heading--span
+  }//end of __heading
+
+  &__list{
+    text-align: center;
+    font-size: $font-size-default;
+    & ul{
+      list-style: none;
+      color: $color-gray-dark-1;
+      width: 75%;
+      margin: 0 auto;
+
+      & li{
+        margin: 0 auto;
+        padding: 1.2rem;
+        &:not(:last-child){
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+    }
+
+  }//endo of __list
+  //backside styles
+  &__cta{
+    @include center;
+    text-align: center;
+    text-transform: uppercase;
+    width: 80%;
+  }
+
+  &__price-box{
+    color: $color-white;
+
+  }
+  &__text{
+
+  font-size: $font-size-default;
+  }
+  &__price{
+    font-weight: 200;
+    font-size: 6rem;
+  }
+
+}//end of .card

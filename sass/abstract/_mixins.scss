@@ -1,0 +1,37 @@
+@mixin center{
+  &{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@mixin clearfix{
+  &::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin componet-styles{
+  box-shadow: $shadow-card;
+  border-radius: $border-radius-card;
+}
+
+@mixin repond($break-point){
+  @if $break-point==smphone{
+    @media (max-width: 20em){@content};
+  }
+  @if $break-point==phone{
+    @media (max-width: 37.5em){@content};
+  }
+  @if $break-point==tab-port{
+    @media (max-width: 56.25em){@content};
+  }
+  @if $break-point==tab-land{
+    @media (max-width: 75em){@content};
+  }
+
+}
